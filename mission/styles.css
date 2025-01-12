@@ -1,0 +1,41 @@
+h1{
+    text-align:center;
+    font-size:2.25em;
+    letter-spacing:3px;
+}
+
+h2{
+    color:#006EB6;
+    text-align:center;
+    letter-spacing:2px;
+    font-size:1em;
+    border-bottom: 1px lightgray solid;
+    margin-bottom: 40px;
+    margin-top: -20px;
+}
+
+.italic{
+    font-style:italic;
+}
+
+p{
+    text-align:left;
+    padding:3px;
+}
+
+li{
+    padding:10px;
+}
+
+.content{
+    max-width:600px;
+    margin: 0 auto;
+    line-height:1.5;
+}
+
+img{
+    height:auto;
+    width:150px;
+    display: block;
+    margin: 0 auto;
+}
