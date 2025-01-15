@@ -1,0 +1,31 @@
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 1.5px;
+    border-bottom: 2px gray solid;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+main {
+    margin: 50px;
+}
+
+a {
+    padding: 15px;
+    background-color: rgb(72, 123, 226);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a.hover {
+    padding: 15px;
+    background-color: rgb(13, 40, 94);
+    color: rgb(116, 116, 116);
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
