@@ -2,12 +2,19 @@ header {
     text-transform: uppercase;
 }
 
+
 body {
     border: 1px lightgray solid;
     padding: 60px;
     margin-left: 400px;
     margin-right: 400px;
 }
+
+.dark {
+    background-color: #333;
+    color: white;
+}
+
 
 h1 {
     text-align: center;
@@ -24,6 +31,10 @@ h2 {
     border-bottom: 1px lightgray solid;
     margin-bottom: 40px;
     margin-top: -20px;
+}
+
+body.dark h2 {
+    color: #85cdfd
 }
 
 .italic {
@@ -45,7 +56,7 @@ li {
     line-height: 1.5;
 }
 
-img {
+#image {
     height: auto;
     width: 150px;
     display: block;

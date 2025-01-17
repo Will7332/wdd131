@@ -19,13 +19,15 @@ a {
     text-decoration: none;
     border-radius: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-a.hover {
+a:hover {
     padding: 15px;
-    background-color: rgb(13, 40, 94);
-    color: rgb(116, 116, 116);
+    background-color: rgb(61, 100, 176);
+    color: rgb(241, 241, 241);
     text-decoration: none;
     border-radius: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
