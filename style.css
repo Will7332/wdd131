@@ -6,14 +6,17 @@ h1 {
     border-bottom: 2px gray solid;
     margin-left: 75px;
     margin-right: 75px;
+    margin-bottom: 30px;
 }
 
 h2 {
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-bottom: 5px;
+    margin: 0;
+    text-align: center;
     margin-bottom: 30px;
-    /* padding-bottom: 15px; */
-    border-bottom: gray solid 2px;
+    border-bottom: lightblue solid 2px;
+
 }
 
 main {
@@ -22,11 +25,18 @@ main {
 
 section {
     /* margin: 20px; */
+    width: 260px;
     display: inline-block;
     padding: 15px;
 }
 
-a {
+.list {
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+}
+
+.ponder {
     padding: 15px;
     background-color: rgb(72, 123, 226);
     color: white;
@@ -34,9 +44,11 @@ a {
     border-radius: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: background-color 0.2s ease, color 0.2s ease;
+    margin: 15px;
+    text-align: center;
 }
 
-a:hover {
+.ponder:hover {
     padding: 15px;
     background-color: rgb(61, 100, 176);
     color: rgb(241, 241, 241);
@@ -44,4 +56,36 @@ a:hover {
     border-radius: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+}
+
+.prove {
+    padding: 15px;
+    background-color: rgb(59, 20, 158);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin: 15px;
+    text-align: center;
+}
+
+.prove:hover {
+    padding: 15px;
+    background-color: rgb(22, 5, 105);
+    color: rgb(194, 195, 206);
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+ul {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline;
+    margin-left: 25px;
+}
+
+li {
+    display: inline;
 }
