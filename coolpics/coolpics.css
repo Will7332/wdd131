@@ -13,7 +13,7 @@ h1 {
     padding: 15px;
 }
 
-nav {
+.menu {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -22,12 +22,21 @@ nav {
     text-align: center;
 }
 
-button {
+
+.hide {
+    display: none
+}
+
+
+.menu-button {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     background-color: rgb(56, 14, 153);
     border: none;
     color: white;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
 }
 
 h2 {
@@ -65,7 +74,9 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-img {
+
+
+.normal {
     height: 250px;
     width: 250px;
     object-fit: cover;
@@ -74,6 +85,35 @@ img {
     padding: 10px;
     background-color: white;
     box-shadow: 5px 8px 10px;
+}
+
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.close {
+    grid-column: 6/7;
+    grid-row: 1/2;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 2rem;
+}
+
+.enlarged {
+    padding: 15px;
+    max-height: 100%;
+    max-width: 95%;
+    grid-column: 1/7;
+    grid-row: 2/3;
+
 }
 
 @media screen and (min-width:700px) {
@@ -95,12 +135,53 @@ img {
         justify-content: center;
     }
 
+    /* 
     button {
         display: none;
-    }
+    } */
 
     a {
         padding: 5px 15px;
         margin: 0px 35px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu-button {
+        display: hide;
+    }
+
+
+    .viewer {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        bottom: 50px;
+        right: 50px;
+        background-color: rgba(0, 0, 0, 0.75);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .close {
+        grid-column: 6/7;
+        grid-row: 1/2;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .enlarged {
+        padding: 15px;
+        max-height: 100%;
+        max-width: 100%;
+        grid-column: 1/7;
+        grid-row: 2/6;
+        justify-self: center;
+        align-self: center;
     }
 }
