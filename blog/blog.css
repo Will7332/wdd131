@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --gold:#EFC69B;
+    --red:#AF1B3F;
+    --dark:#473144;
+    --primary-font: Figtree;
+}
+
+.main-nav{
+    display:flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-decoration: none;
+    color: var(--red);
+    font-family: var(--primary-font);
+    justify-content: end;
+    justify-items: end;
+    margin: 0 auto;
+    border-top: 1px solid  var(--gold);
+    border-bottom: 1px solid var(--gold);
+    padding-right: 120px;
+    /* padding-left: 25px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    list-style-type: none;
+}
+
+.skiptocontent a{
+    /* display: none; */
+    position: absolute;
+    top: -40px;
+    background-color: var(--red);
+    color: white;
+    padding: 10px;
+}
+
+.skiptocontent a:hover{
+    background-color: darkred;
+    color: rgb(243, 243, 243);
+}
+
+.skiptocontent a:focus{
+    position: absolute;
+    top:0px;
+}
+
+li{
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+article{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: auto auto auto;
+    margin: 10px;
+}
+
+h1 {
+    font-family: var(--primary-font);
+    color: var(--dark);
+    text-align:center;
+    padding: 25px;
+}
+
+h2{
+    font-family: var(--primary-font);
+    color: var(--red);
+}
+
+p {
+    color: var(--dark);
+    font-family: var(--primary-font);
+}
+
+a{
+    font-family: var(--primary-font);
+    color: var(--red);
+}
