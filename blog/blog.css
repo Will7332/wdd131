@@ -49,11 +49,19 @@ li{
     padding-left: 25px;
 }
 
-article{
+.book{
     display: grid;
     gap: 15px;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 20% 1fr;
     margin: 10px;
+}
+
+.left{
+    text-align:right;
+}
+
+.main{
+    border-left: 1px var(--gold) solid;
 }
 
 h1 {
