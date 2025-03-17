@@ -6,27 +6,29 @@ function getRandomIndex(maxNum) {
     return Math.floor(Math.random()* maxNum);
 }
 
-alert(getRandomIndex(recipes.length));
+// alert(getRandomIndex(recipes.length));
 
 function recipeTemplate(recipe){
     return `<article class="recipe">
-            <img src=${recipe.image}>
-            <div class="recipeinfo">
-                <div class="tag_row">
-                    ${tagsTemplate()}
+                <img src=${recipe.image}>
+                <div class="recipeinfo">
+                    <div class="tag_row">
+                        ${tagsTemplate(recipe.tags)}
+                    </div>
+                    <h2>${recipe.name}</h2>
+                    ${ratingTemplate(recipe.rating)}
+                    <p class="description">${recipe.description}</p>
                 </div>
-                <h2>${recipe.name}</h2>
-                ${ratingTemplate(recipe.rating)}
-                <p class="description">${recipe.description}</p>
-            </div>`
+            </article>`
 }
 
-function tagsTemplate() {
+function tagsTemplate(tags) {
     // loop through the tags list and transform the strings to HTML
 
     // for (let i = 0; i < recipes.tags.length; i++)
-    let html = recipes.tags.map(tag => `<span>${tag}</span>`).join("");
-    return html;
+    // let html = recipes.tags.map(tag => `<span>${tag}</span>`).join("");
+    // return html;
+    return tags.map(tag => `<span class="tag">${tag}</span>`).join("");
 }
 
 function ratingTemplate(rating) {
@@ -40,7 +42,7 @@ function ratingTemplate(rating) {
     for (let i = 0; i < 5; i++){
 
         // check to see if the current index of the loop is less than our rating
-        if (recipes.rating < i) {
+        if (rating > i) {
             // if so then output a filled star
             html += `<span aria-hidden="true" class="icon-star">⭐</span>`
         }
@@ -57,13 +59,19 @@ function ratingTemplate(rating) {
 
 function renderRecipes(recipeList) {
     // get the element we will output the recipes into
-    let recipeArticle = document.querySelector("recipe");
+    let recipeArticle = document.querySelector(".recipe-container");
+    recipeArticle.innerHTML = "";
 
     // use the recipeTemplate function to transform our recipe objects into recipe HTML strings
-    const recipeshtml = recipes.map(recipeTemplate).join("");
+    const recipeshtml = recipeList.map(recipeTemplate).join("");
 
     // Set the HTML strings as the innerHTML of our output element.
     recipeArticle.innerHTML = recipeshtml;
+}
+
+
+function getRandomListEntry(array) {
+    return array[getRandomIndex(array.length)];
 }
 
 function init() {
@@ -92,9 +100,9 @@ function filterRecipes(query){
 
 function searchHandler(event){
     event.preventDefault()
-    let userInput = forminput.querySelector("input").value.toLowerCase;
-    filteredRecipes = filterRecipes(userInput);
-    renderRecipes(filterRecipes);
+    let userInput = forminput.querySelector("input").value.toLowerCase();
+    let filteredRecipes = filterRecipes(userInput);
+    renderRecipes(filteredRecipes);
 
 }
 
